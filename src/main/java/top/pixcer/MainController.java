@@ -10,6 +10,6 @@ import javafx.scene.control.Label;
  **/
 public class MainController {
 
-    @FXML
-    private Label welcomeText;
+//    @FXML
+//    private Label welcomeText;
 }

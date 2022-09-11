@@ -83,7 +83,7 @@ public class SpringConfig {
                 })
                 .setName("bugTool")
                 .setScriptEncoding("UTF-8")
-                .addScript("classpath:work/schema.sql")
+                .addScript("classpath:script/schema.sql")
                 .build();
     }
 

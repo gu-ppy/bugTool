@@ -21,8 +21,9 @@
         </triggeringPolicy>
     </appender>
 
-    <root level="INFO">
+    <root level="ALL">
         <appender-ref ref="CONSOLE" />
-        <appender-ref ref="FILE" />
+<!--        暂时只输出到控制台-->
+<!--        <appender-ref ref="FILE" />-->
     </root>
 </configuration>

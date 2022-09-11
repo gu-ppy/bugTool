@@ -4,7 +4,6 @@
  * Desc：
  **/
 module HTest {
-    //requires org.hsqldb;
     requires com.h2database;
     requires spring.context;
     requires spring.beans;
@@ -12,9 +11,9 @@ module HTest {
     requires spring.core;
     requires java.sql;
     requires java.naming;
+    requires java.prefs;
     requires lombok;
     requires org.slf4j;
-    requires java.prefs;
     requires javafx.fxml;
     requires javafx.controls;
 
@@ -22,7 +21,7 @@ module HTest {
     opens top.pixcer to javafx.fxml;
 
     //     开放资源目录的访问权限（运行时）
-    opens work;
+    opens script;
     opens layout;
     exports top.pixcer.config;
     exports top.pixcer.service;

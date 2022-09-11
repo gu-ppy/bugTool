@@ -1,9 +1,16 @@
 package top.pixcer;
 
 import javafx.application.Application;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.ListView;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.control.SplitPane;
+import javafx.scene.control.TableView;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -33,8 +40,8 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         Main.applicationContext = new AnnotationConfigApplicationContext(SpringConfig.class);
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getClassLoader().getResource("layout/bugTool-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        Scene scene = new Scene(fxmlLoader.load(), 960, 680);
+        stage.setTitle("BUG TOOL");
         stage.setScene(scene);
 
         stage.show();

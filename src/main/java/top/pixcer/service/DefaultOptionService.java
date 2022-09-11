@@ -23,7 +23,6 @@ public class DefaultOptionService implements OptionService {
 
     private final static String DEFAULT_WORKSPACE_LOCATION = System.getProperty("user.home") + "/bugTool";
 
-
     public DefaultOptionService() {
     }
 
@@ -31,7 +30,6 @@ public class DefaultOptionService implements OptionService {
     public Optional<String> getOption(String key) {
         return Optional.empty();
     }
-
 
     @Override
     public void init() {
@@ -45,8 +43,6 @@ public class DefaultOptionService implements OptionService {
             Preferences node = preferences.node(PREFERENCES_NODE_KEY);
 
             String workspace = node.get(DEFAULT_WORKSPACE_KEY, "");
-
-
             if (workspace.equals("")) {
                 log.info("current workspace location is empty, so init workspace now !!");
                 // possible  not exists ..
@@ -60,6 +56,7 @@ public class DefaultOptionService implements OptionService {
         } catch (Exception e) {
             // pass
             // never impossible
+            log.error("workspace initializing...An unknown error occurred..");
         }
 //        preferences.
     }
@@ -101,6 +98,7 @@ public class DefaultOptionService implements OptionService {
         } catch (Exception e) {
             // pass
             // impossible ..
+            log.error("setWorkSpace-ing...An unknown error occurred..");
         }
     }
 }
