@@ -20,7 +20,6 @@ public class DefaultInitService implements InitService , InitializingBean {
 
     @Override
     public void init() {
-
         // workspace check ...
         optionService.init();
 

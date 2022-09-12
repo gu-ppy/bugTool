@@ -5,6 +5,7 @@ import org.h2.jdbcx.JdbcDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 import org.springframework.core.io.Resource;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.embedded.ConnectionProperties;
 import org.springframework.jdbc.datasource.embedded.DataSourceFactory;
@@ -25,9 +26,11 @@ import java.sql.Driver;
  * Desc：
  **/
 @Slf4j
-@PropertySource("classpath:application.properties")
 @Configuration
+@EnableJpaRepositories
 @ComponentScan(basePackages = "top.pixcer")
+@Import(cn.hutool.extra.spring.SpringUtil.class)
+@PropertySource("classpath:application.properties")
 public class SpringConfig {
     /**
      * application datasource default db name ...
@@ -92,4 +95,9 @@ public class SpringConfig {
         return new JdbcTemplate(dataSource);
     }
 
+//    @Bean
+//    EntityManagerFactory entityManagerFactory() {
+//        // …
+//        org.springframework.orm.jpa
+//    }
 }

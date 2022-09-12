@@ -1,5 +1,8 @@
 package top.pixcer;
 
+import cn.hutool.extra.ftp.Ftp;
+import cn.hutool.extra.spring.SpringUtil;
+import cn.hutool.extra.ssh.JschUtil;
 import javafx.application.Application;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
@@ -45,6 +48,8 @@ public class Main extends Application {
         stage.setScene(scene);
 
         stage.show();
+//        new Ftp();
+
     }
 
     @Override

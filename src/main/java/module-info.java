@@ -3,12 +3,15 @@
  * on 2022/9/7 21:37 <hr/>
  * Desc：
  **/
-module HTest {
+module bugtool.base {
     requires com.h2database;
     requires spring.context;
     requires spring.beans;
     requires spring.jdbc;
     requires spring.core;
+    requires spring.data.jpa;
+    requires spring.data.commons;
+    requires spring.orm;
     requires java.sql;
     requires java.naming;
     requires java.prefs;
@@ -16,6 +19,8 @@ module HTest {
     requires org.slf4j;
     requires javafx.fxml;
     requires javafx.controls;
+    requires hutool.extra;
+    requires jsch;
 
     opens top.pixcer.config to spring.core;
     opens top.pixcer to javafx.fxml;
@@ -27,4 +32,8 @@ module HTest {
     exports top.pixcer.service;
     exports top.pixcer.util;
     exports top.pixcer;
+    exports top.pixcer.ui;
+    opens top.pixcer.ui to javafx.fxml;
+    exports top.pixcer.repository;
+    exports top.pixcer.entity;
 }

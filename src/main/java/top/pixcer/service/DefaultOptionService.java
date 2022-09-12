@@ -75,8 +75,7 @@ public class DefaultOptionService implements OptionService {
 
     @Override
     public void setWorkSpace(String value) {
-
-        // check value is normal ..
+        // check value is normal ...
         if (!StringUtils.hasText(value)) {
             throw new IllegalArgumentException("workSpace must not be null !!!");
         }

@@ -3,9 +3,9 @@
  * on 2022/9/10 15:30 <hr/>
  * Desc：
  **/
-module H {
+module bugtool.test.base {
     requires spring.test;
-    requires HTest;
+    requires bugtool.base;
     requires junit;
     requires spring.core;
     requires spring.beans;
