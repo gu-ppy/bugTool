@@ -1,0 +1,25 @@
+.label {
+    /*-fx-text-fill: 'red';*/
+
+}
+.list-cell:focused {
+    -fx-background-color: red;
+    -fx-border-color: 'transparent';
+}
+.list-view {
+    -fx-border-color: transparent;
+    /*-fx-focus-traversable: false;*/
+    /*-fx-focus-color: red;*/
+}
+.list-view:focused {
+    -fx-border-color: transparent;
+    -fx-border-style: none;
+    -fx-stroke: transparent;
+    -fx-background-color: none;
+}
+
+
+.v-box {
+  -fx-border-color: 'white';
+    -fx-border-width: 0 ,2 ,0 ,0;
+}

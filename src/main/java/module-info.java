@@ -11,7 +11,11 @@ module bugtool.base {
     requires spring.core;
     requires spring.data.jpa;
     requires spring.data.commons;
+    requires org.hibernate.orm.core;
+    requires java.persistence;
     requires spring.orm;
+    requires spring.tx;
+    requires spring.aop;
     requires java.sql;
     requires java.naming;
     requires java.prefs;
@@ -28,6 +32,7 @@ module bugtool.base {
     //     开放资源目录的访问权限（运行时）
     opens script;
     opens layout;
+    opens css;
     exports top.pixcer.config;
     exports top.pixcer.service;
     exports top.pixcer.util;

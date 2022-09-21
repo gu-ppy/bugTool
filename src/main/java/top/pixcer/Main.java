@@ -12,6 +12,8 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import org.springframework.context.ApplicationContext;
@@ -42,9 +44,10 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Main.applicationContext = new AnnotationConfigApplicationContext(SpringConfig.class);
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getClassLoader().getResource("layout/bugTool-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getClassLoader().getResource("layout/navigator-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 960, 680);
         stage.setTitle("BUG TOOL");
+
         stage.setScene(scene);
 
         stage.show();

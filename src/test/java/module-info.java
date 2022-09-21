@@ -10,6 +10,7 @@ module bugtool.test.base {
     requires spring.core;
     requires spring.beans;
     requires spring.context;
+
     requires java.prefs;
     opens top.test.pixcer to spring.core;
     exports top.test.pixcer;
